@@ -15,9 +15,17 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Home(),
+      theme: ThemeData(
+        primaryColor: Colors.teal,
+        scaffoldBackgroundColor: Colors.white,
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.teal,
+          foregroundColor: Colors.white, // text/icon color
+        ),
+      ),
     );
   }
 }
